@@ -1,0 +1,212 @@
+Neovim tutor
+
+nvim +Tutor  // to enter the tutor file directory
+
+# Lesson 0
+
+- use `:u` to undo the latest change
+- type <Enter> or "K"  on link to open it
+- use `:q` to close window
+- use `:help` <Enter> for help
+
+## Lesson 1.1: MOVING THE CIRSOR
+- "h" key moves left
+- "l" key moves right
+- "j" looks like down arrow
+- "k" key moves up
+
+## Lesson 1.2: EXITING NEOVIM
+- <Esc> key go to normal mode
+- use `:q!` <Enter> quits the editor, DISCARDING any changes made
+- use `:Tutor` <Enter> will go to tutorial
+
+## Lesson 1.3: TEXT EDITING: DELETION
+- move the cursor to letter you want to delete and press "x"
+
+## Lesson 1.4: TEST EDITING: INSERTION
+- press "i" to insert on the cursor
+- press <Esc> to return to normal mode
+
+## Lesson 1.5: TEST EDITING: APPENDING
+- press "A" to append text to the end of the line no matter where is the cursor
+- press <Esc> to return to normal mode
+
+## Lesson 1.6: EDITING A FILE
+- use `:wq` to write a file and quit
+- to start Neovim from shell use $ nvim FILENAME
+
+## Lesson 2.1: DELETION COMMANDS
+- use "dw" to delete word form the beginning of cursorNeovim tutor
+
+## Lesson 2.2: MORE DELETION COMMANDS
+- use "d$" to delete to the end of a line start from where the curser is
+
+## Lesson 2.3: ON OPERATORS AND MOTIONS
+- commands that changes text are made from operator and motion
+- format for delete command is as follows:
+    d  motion
+    where:
+      d        - is the delete operator
+      motion   - is what the operator will operate on
+
+    motion examples:
+      w - until the start of next word
+      e - to the end of the current word
+      $ - to the end of the line
+
+## Lesson 2.4: USING A COUNT FOR A MOTION
+- typing a number with a motion repeats it that many times
+- type "2w" move the cursor two words forward
+- type "0" move the cursor to the start of the line
+
+## Lesson 2.5: USING A COUNT TO DELETE MORE
+- typing a number with an operator repeats it that many times
+- type "d2w" to delete two words
+
+## Lesson 2.6: operating on lines
+- type "dd" to dlete a whole line
+
+## Lesson 2.7: THE UNDO COMMAND
+- use "u" to undo the last command
+- use "U" to fix a whole line
+- use <C-r> to undo the undo
+
+## Lesson 3.1: THE PUT COMMAND
+- use "p" to put previously deleted text after the cursor
+- use "P" to put previously deleted text before the cursor
+
+## Lesson 3.2: THE REPLACE COMMAND
+- use "r" to replace the character at the cursor
+
+## Lesson 3.3: THE CHANGE OPERATOR
+- use "ce" to change after the cursor to the end of a word
+- "ce" deletes the word and place you in Insert mode
+
+## Lesson 3.4: MORE CHANGES USING c
+- the change operator is used with the same motions
+- work with number ex:
+    c [number] motion
+- motion ex:
+    "cw" for word
+    "c$" for the end of line
+
+## Lesson 4.1: CURSOR LOCATION AND FILE STATUS
+- press <C-g> show your location in a file and the file status
+- use "gg" to move you to the start of the file
+- use "G" to move to the botton of the file
+- use "[number] G" will go the the line in that number
+
+## Lesson 4.2: THE SEARCH COMMAND
+- type "/ [word]" to search for word
+- to go to the next word in th search use "n"
+- to go th the previuse word in the seach use "N"
+- to go back to where you cam from press <C-i>
+- to go forwad use <C-o>
+- to remove highlight use <C-l> or ":noh"
+
+## Lesson 4.3: Matching PARENTHESES SEARCH
+- type "%" in a bracket (,[ or { to get the matching or closing bracket
+- [ for example (this) ]
+
+## Lesson 4.4: THE SUBSITUTE COMMAND
+- move cursor to word you want to substitute
+- use ":s/new/old" to change new to old
+- use ":s/new/old/g" to change all occurences of "old" in the line to "new"
+- use "#,#s/old/new/g" to change "old" to new in every line number
+	where # are the line numbers (i.e., 1,3 means from line 1 to line 3)
+- use ":%s/old/new/g" to change every occurence in the whole file
+- use ":%s/old/new/gc" to find every occurence in the whole file with a prompt wheter to 
+  substitute or not
+
+## Lesson 5.1: HOW TO EXCUTE AN EXTERNAL COMMAND
+- use ":! [command]" to ecute that command
+- useing ":!" will alolow you to enter a command-line command
+- i.e, ":! ls -al" list dir using shell
+
+## Lesson 5.2: MORE ON WRITING FILES
+- to save the changes made to the text in a new file use ":w FILENAME"
+
+## Lesson 5.3: SELECTING TEXT TO WRITE
+- To save a part of the file, type "v" select then use ":w FILENAME"
+- after selecting and when you try to save you will see ":'<,'>" thats normal
+- you can do any thing after selecting the text ex: you can use "d" to delete the selected
+- use "v" to make normal selection
+- use "V" to select hole line
+- use <C-v> to select blockwise
+
+## Lesson 5.4: RETRIVING AND MERGIN FILES
+- to retrive the content of a file use ":r FILENAME"
+- this will get the content of 'FILENAME' and put it in the current file
+- use ":r [command]" to read the output of an exrenal command and puts it under the cursor
+
+## Lesson 6.1: THE OPEN COMMAND
+- use "o" to open a new line below the cursor and place you in insert mode
+- use "O" to open a new line above the cursor
+
+## Lesson 6.2: THE APPEND COMMAND
+- use "a" to insert text after the cursor
+
+## Lesson 6.3: ANOTHER WAY TO REPLACE
+- use "R" to replace more than one character
+- replace mode is like Insert mode but every character repalces an existing character
+
+## Lesson 6.4: COPY AND PASTE TEXT
+- use "y' to yank (copy) then use (p) to put (paste)
+- you can select "v" to then "y" to copy selected "p" to paste after the cursor
+- "P" to put before the cursor
+- useing "y" without selecting will copy the whole line
+- using "yw" will copy one word
+
+## Lesson 6.6: SET OPTION
+- Typing ":set xxx" sets the option "xxx". Some options are:
+
+        'ic' 'ignorecase'   ignore upper/lower case when searching
+        'is' 'incsearch'    show partial matches for a search phrase
+        'hls' 'hlsearch'    highlight all matching phrases
+
+     You can either use the long or the short option name.
+
+- Prepend "no" to switch an option off:
+        :set noic
+- Prepend "inv" to invert an option:
+        :set invic
+
+## Lesson 7.1: GETTING HELP
+- use <F1> for help
+- use ":help" for help
+- use <C-w><C-w> to jump from one window to another
+- you can saerch any subject by using ":help [subject]" ex:
+	:help w
+	:help c_CTRL-D
+	:help insert-index
+	:help user-manual
+	:help init.vim
+
+## Lesson 7.2: CREATE A STARTUP SCRIPT
+- Start editing the "init.vim" file
+	:call mkdir(stdpath('config'),'p')
+	:exe 'edit' stdpath('config').'/init.vim'
+- Write the file with:
+	:w
+
+## Lesson 7.3: COMPLETION
+- command line completion with <C-d> and <Tab>
+- using <C-d> in command mode will show list of commands
+- using <Tab> will complete the command
+- completion is useful for ":help"
+
+
+- *Learn Vim Progressively*:
+  http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+- *Learning Vim in 2013*:
+  http://benmccormick.org/learning-vim-in-2014/
+- *Vimcasts*:
+  http://vimcasts.org/
+- *Vim Video-Tutorials by Derek Wyatt*:
+  http://derekwyatt.org/vim/tutorials/
+- *Learn Vimscript the Hard Way*:
+  http://learnvimscriptthehardway.stevelosh.com/
+- *7 Habits of Effective Text Editing*:
+  http://www.moolenaar.net/habits.html
+- *vim-galore*:
+  https://github.com/mhinz/vim-galore
