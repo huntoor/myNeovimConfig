@@ -21,7 +21,16 @@
             :w
     ```
 ## Plugins 
-    [ 
+    [NerdTree](https://github.com/preservim/nerdtree)
+    [CoC.nvim](https://github.com/neoclide/coc.nvim)
+    [vim-airline](https://github.com/vim-airline/vim-airline)
+    [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+    [vim-nightfly-colors](https://github.com/bluz71/vim-nightfly-colors)
+
 ## Links
     [Configure NeoVim to make it function as an IDE](https://medium.com/@fonderelite/configure-neovim-to-make-it-function-as-an-ide-9a0e49ccf887): Tutorial for configuring neovim
     [vim-plug Tutorial](https://github.com/junegunn/vim-plug/wiki/tutorial): vim-plug tutorial and how to use it
+    [How to Setup CoC](https://www.linuxfordevices.com/tutorials/linux/setup-coc-autocompletion-vim): How to setup CoC for autocompletion in Vim
+
+## My Configuration file
+    [myInit.vim](./myInit.vim)
