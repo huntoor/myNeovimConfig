@@ -31,6 +31,8 @@
     [Configure NeoVim to make it function as an IDE](https://medium.com/@fonderelite/configure-neovim-to-make-it-function-as-an-ide-9a0e49ccf887): Tutorial for configuring neovim
     [vim-plug Tutorial](https://github.com/junegunn/vim-plug/wiki/tutorial): vim-plug tutorial and how to use it
     [How to Setup CoC](https://www.linuxfordevices.com/tutorials/linux/setup-coc-autocompletion-vim): How to setup CoC for autocompletion in Vim
+    [Neovim-Config](https://github.com/offensive-droid/Neovim-Config/tree/main): A Neovim Configuration
+    [coc-react-refactor](https://github.com/fannheyward/coc-react-refactor): React refactor extension for coc.nvim
 
 ## My Configuration file
     [myInit.vim](./myInit.vim)
