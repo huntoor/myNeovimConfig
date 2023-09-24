@@ -1,1 +1,0 @@
-/home/hunter/.config/nvim/init.vim

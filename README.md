@@ -42,4 +42,4 @@
 [coc-react-refactor](https://github.com/fannheyward/coc-react-refactor): React refactor extension for coc.nvim
 
 ## My Configuration file
-[myInit.vim](./myInit.vim)
+[myInit.vim](./vimConfig.vim)
